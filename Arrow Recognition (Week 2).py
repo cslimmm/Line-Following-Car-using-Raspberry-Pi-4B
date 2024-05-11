@@ -41,7 +41,6 @@ def combined_function():
                 bbox_x, bbox_y, bbox_w, bbox_h = cv.boundingRect(poly)
                 cv.rectangle(frame, (bbox_x, bbox_y), (bbox_x + bbox_w, bbox_y + bbox_h), (0, 0, 0), 2)
 
-
                 num_circles = 0
                 num_triangles = 0
                 num_rectangles = 0
@@ -49,7 +48,7 @@ def combined_function():
                 num_hexagon = 0
                 num_pentagon = 0
                 num_partialCircle = 0
-                
+            
                 num_corners = len(poly)
                 
                 if num_corners == 3:
@@ -132,9 +131,7 @@ def combined_function():
                     
                         if text_counter >= 5 :
                             final_text = arrow_text
-                        
                     break
-                        
 
         cv.putText(frame, f"Triangles: {num_triangles}", (20, 20), font_face, font_scale, (0, 0, 0), 1)
         cv.putText(frame, f"Rectangles: {num_rectangles}", (20, 40), font_face, font_scale, (0, 0, 0), 1)
