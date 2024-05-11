@@ -29,10 +29,8 @@ STATES_PER_REVOLUTION = 40
 distance=0
 
 gpio.setmode(gpio.BOARD)
-
 gpio.setup(encoderA, gpio.IN, pull_up_down=gpio.PUD_UP)
 gpio.setup(encoderB, gpio.IN, pull_up_down=gpio.PUD_UP)
-
 last_stateA = gpio.input(encoderA)
 last_stateB = gpio.input(encoderB)
 
