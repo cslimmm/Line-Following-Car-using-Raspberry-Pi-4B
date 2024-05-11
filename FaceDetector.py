@@ -3,7 +3,6 @@ import numpy as np
 import os
 from PIL import Image
 
-
 class Face_Recog:
     def __init__(self):
         pass
@@ -20,7 +19,6 @@ class Face_Recog:
         # Load the trained LBPH face recognizer model
         recognizer.read("face-trainner.yml")
 
-        
         name="unknown"
         gray  = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) #convert Video frame to Greyscale
         faces = face_cascade.detectMultiScale(gray, scaleFactor=1.5, minNeighbors=5) #Recog. faces
