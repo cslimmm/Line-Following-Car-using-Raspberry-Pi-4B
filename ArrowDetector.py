@@ -1,14 +1,12 @@
 import cv2
 import numpy as np
 
-
 class ArrowDetector:
     def __init__(self):
         pass
     
     def detect_arrow_direction(self, image):
         arrow = image.copy()
-        
         gray = cv2.cvtColor(arrow, cv2.COLOR_BGR2GRAY)
         blurred = cv2.GaussianBlur(gray, (5, 5), 0)
         edges = cv2.Canny(blurred, 50, 150)
